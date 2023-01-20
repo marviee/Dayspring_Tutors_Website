@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sign_up.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Sign Up</title>
+
+    <style>
+      /* Imported Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 70px;
+        transition: all 0.6s;
+      }
+      .navbar:hover {
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.8);
+      }
+
+      .navbar-logo-div {
+        width: 50%;
+      }
+
+      .navbar-DTlogo {
+        background: url("./images/DTlogo.png") center/cover no-repeat;
+        height: 60px;
+        width: 60px;
+      }
+
+      .navbar ul {
+        height: auto;
+        list-style: none;
+        padding: 0px;
+        text-align: right;
+        width: 50%;
+      }
+
+      .navbar ul li a {
+        background-color: inherit;
+        color: #000;
+        display: inline-block;
+        padding: 10px 15px;
+        text-decoration: none;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .navbar {
+          padding: 10px 30px;
+        }
+
+        .navbar-logo-div {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 1300px) and (max-height: 500px) {
+        .navbar {
+          padding: 10px 70px;
+        }
+      }
+
+      /* Sign Up Box */
+      .sign-box {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+      }
+
+      form {
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding: 30px;
+        width: 40%;
+      }
+
+      .sign-box h2 {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      #username,
+      #userdept,
+      #userlevel,
+      #usercell {
+        background: rgba(21, 95, 138, 0);
+        border: 1px solid;
+        border-radius: 10px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 10px;
+        margin-top: 3px;
+        padding: 10px;
+        width: 100%;
+      }
+
+      .course-list {
+        font-size: 90%;
+        margin: 10px 0 5px 0;
+        text-align: left;
+        width: 100%;
+      }
+
+      .select-course {
+        line-height: 1.5;
+      }
+
+      .check-box-label {
+        font-size: 90%;
+        margin-right: 10px;
+      }
+
+      .button-div {
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+      }
+
+      .submit-btn {
+        background: inherit;
+        border: 1px solid;
+        border-radius: 30px;
+        color: #ff0000;
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 10px 15px;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .sign-box {
+          padding-top: 30px;
+        }
+      }
+      @media screen and (min-width: 800px) and (max-width: 1300px) {
+        form {
+          width: 50%;
+        }
+      }
+      @media screen and (min-width: 500px) and (max-width: 800px) {
+        form {
+          width: 60%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        form {
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 1300px) and (max-height: 500px) {
+        .sign-box {
+          padding: 50px 0px;
+        }
+
+        form {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <div class="navbar-logo-div">
+        <div class="navbar-DTlogo"></div>
+      </div>
+
+      <ul>
+        <li class="navbar-home-list"><a href="./index.html">Home</a></li>
+      </ul>
+    </div>
+
+    <!-- Body -->
+    <div class="sign-box">
+      <form action="./index.html">
+        <h2>Registration Form</h2>
+        <label for="username">Full Name:</label>
+        <input type="text" id="username" />
+
+        <br />
+
+        <label for="userdept">Department:</label>
+        <input type="text" name="" id="userdept" />
+
+        <br />
+
+        <label for="usercell">Phone Number:</label>
+        <input type="text" name="" id="usercell" />
+
+        <label for="userlevel">Level:</label>
+        <input type="text" name="" id="userlevel" />
+
+        <p class="course-list">Courses you want to enroll for:</p>
+        <div class="select-course">
+          <input type="checkbox" id="mth101" />
+          <label class="check-box-label" for="mth101">MTH 101</label>
+
+          <input type="checkbox" id="mth105" />
+          <label class="check-box-label" for="mth105">MTH 105</label>
+
+          <input type="checkbox" id="ssc105" />
+          <label class="check-box-label" for="ssc105">SSC 105</label>
+
+          <input type="checkbox" id="phy101" />
+          <label class="check-box-label" for="phy101">PHY 101</label>
+
+          <input type="checkbox" id="phy105" />
+          <label class="check-box-label" for="phy105">PHY 105</label>
+
+          <br />
+
+          <input type="checkbox" id="chm101" />
+          <label class="check-box-label" for="chm101">CHM 101</label>
+        </div>
+
+        <div class="button-div">
+          <button class="submit-btn" type="submit">Submit</button>
+          <div class="clear"></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
